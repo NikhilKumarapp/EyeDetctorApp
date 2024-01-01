@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <com.pd.lookatme.LookAtMe
+        android:id="@+id/lookme"
+        android:layout_width="374dp"
+        android:layout_height="374dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="389dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="88dp"
+        android:clickable="true"
+        android:onClick="openWebPage"
+        android:text="This app detects your eyes if one look at camera
+        then video will be played otherwise video paused
+        during the program execution."
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        android:background="@drawable/round_corner"/>
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:hint="Enter url of that video you want to play" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="105dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/round_cornered"
+            app:srcCompat="@android:drawable/stat_sys_upload"
+            android:onClick="btnSelectVideo"
+            />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="105dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn3_round_cornered"
+            app:srcCompat="@android:drawable/ic_popup_sync" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="105dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="120dp"
+            android:background="@drawable/btn3_round_cornered"
+            app:srcCompat="?attr/actionModePasteDrawable"
+            android:onClick="btnSelectUrl"/>
+
+    </LinearLayout>
+
+</LinearLayout>
